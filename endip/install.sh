@@ -34,7 +34,7 @@ cfwarpIP(){
 if [[ ! -f "warpendpoint" ]]; then
 echo "Download warp preferred program"
 if [[ -n $cpu ]]; then
-curl -L -o warpendpoint -# --retry 2 https://raw.githubusercontent.com/Ptechgithub/warp/main/endip/$cpu
+curl -L -o warpendpoint -# --retry 2 https://raw.githubusercontent.com/alirezadarvishy/warp/main/endip/$cpu
 fi
 fi
 }
@@ -44,43 +44,43 @@ endipv4(){
 	iplist=100
 	while true
 	do
-		temp[$n]=$(echo 162.159.192.$(($RANDOM%256)))
+		temp[$n]=$(echo 172.64.195.$(($RANDOM%256)))
 		n=$[$n+1]
 		if [ $n -ge $iplist ]
 		then
 			break
 		fi
-		temp[$n]=$(echo 162.159.193.$(($RANDOM%256)))
+		temp[$n]=$(echo 172.65.195.$(($RANDOM%256)))
 		n=$[$n+1]
 		if [ $n -ge $iplist ]
 		then
 			break
 		fi
-		temp[$n]=$(echo 162.159.195.$(($RANDOM%256)))
+		temp[$n]=$(echo 172.66.195.$(($RANDOM%256)))
 		n=$[$n+1]
 		if [ $n -ge $iplist ]
 		then
 			break
 		fi
-		temp[$n]=$(echo 188.114.96.$(($RANDOM%256)))
+		temp[$n]=$(echo 172.67.195.$(($RANDOM%256)))
 		n=$[$n+1]
 		if [ $n -ge $iplist ]
 		then
 			break
 		fi
-		temp[$n]=$(echo 188.114.97.$(($RANDOM%256)))
+		temp[$n]=$(echo 172.68.195.$(($RANDOM%256)))
 		n=$[$n+1]
 		if [ $n -ge $iplist ]
 		then
 			break
 		fi
-		temp[$n]=$(echo 188.114.98.$(($RANDOM%256)))
+		temp[$n]=$(echo 172.69.195.$(($RANDOM%256)))
 		n=$[$n+1]
 		if [ $n -ge $iplist ]
 		then
 			break
 		fi
-		temp[$n]=$(echo 188.114.99.$(($RANDOM%256)))
+		temp[$n]=$(echo 172.71.195.$(($RANDOM%256)))
 		n=$[$n+1]
 		if [ $n -ge $iplist ]
 		then
@@ -93,49 +93,49 @@ endipv4(){
 		then
 			break
 		else
-			temp[$n]=$(echo 162.159.192.$(($RANDOM%256)))
+			temp[$n]=$(echo 172.64.195.$(($RANDOM%256)))
 			n=$[$n+1]
 		fi
 		if [ $(echo ${temp[@]} | sed -e 's/ /\n/g' | sort -u | wc -l) -ge $iplist ]
 		then
 			break
 		else
-			temp[$n]=$(echo 162.159.193.$(($RANDOM%256)))
+			temp[$n]=$(echo 172.65.195.$(($RANDOM%256)))
 			n=$[$n+1]
 		fi
 		if [ $(echo ${temp[@]} | sed -e 's/ /\n/g' | sort -u | wc -l) -ge $iplist ]
 		then
 			break
 		else
-			temp[$n]=$(echo 162.159.195.$(($RANDOM%256)))
+			temp[$n]=$(echo 172.66.195.$(($RANDOM%256)))
 			n=$[$n+1]
 		fi
 		if [ $(echo ${temp[@]} | sed -e 's/ /\n/g' | sort -u | wc -l) -ge $iplist ]
 		then
 			break
 		else
-			temp[$n]=$(echo 188.114.96.$(($RANDOM%256)))
+			temp[$n]=$(echo 172.67.195.$(($RANDOM%256)))
 			n=$[$n+1]
 		fi
 		if [ $(echo ${temp[@]} | sed -e 's/ /\n/g' | sort -u | wc -l) -ge $iplist ]
 		then
 			break
 		else
-			temp[$n]=$(echo 188.114.97.$(($RANDOM%256)))
+			temp[$n]=$(echo 172.68.195.$(($RANDOM%256)))
 			n=$[$n+1]
 		fi
 		if [ $(echo ${temp[@]} | sed -e 's/ /\n/g' | sort -u | wc -l) -ge $iplist ]
 		then
 			break
 		else
-			temp[$n]=$(echo 188.114.98.$(($RANDOM%256)))
+			temp[$n]=$(echo 172.69.195.$(($RANDOM%256)))
 			n=$[$n+1]
 		fi
 		if [ $(echo ${temp[@]} | sed -e 's/ /\n/g' | sort -u | wc -l) -ge $iplist ]
 		then
 			break
 		else
-			temp[$n]=$(echo 188.114.99.$(($RANDOM%256)))
+			temp[$n]=$(echo 172.71.195.$(($RANDOM%256)))
 			n=$[$n+1]
 		fi
 	done
@@ -206,8 +206,8 @@ exit
 
 clear
 echo "--------------------------------------------"
-echo "甬哥Github项目  ：github.com/yonggekkk"
-echo -e "${yellow}By --> Peyman * Github.com/Ptechgithub *${rest}"
+echo "甬哥Github项目  ：github.com/alirezadarvishy"
+echo -e "${yellow}By --> Alireza * Github.com/alirezadarvishy *${rest}"
 echo "--------------------------------------------"
 echo""
 echo -e "${purple}1.${green}IPV4 preferred peer IP${rest}"
