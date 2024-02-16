@@ -44,43 +44,7 @@ endipv4(){
 	iplist=100
 	while true
 	do
-		temp[$n]=$(echo 172.64.195.$(($RANDOM%256)))
-		n=$[$n+1]
-		if [ $n -ge $iplist ]
-		then
-			break
-		fi
-		temp[$n]=$(echo 172.65.195.$(($RANDOM%256)))
-		n=$[$n+1]
-		if [ $n -ge $iplist ]
-		then
-			break
-		fi
-		temp[$n]=$(echo 172.66.195.$(($RANDOM%256)))
-		n=$[$n+1]
-		if [ $n -ge $iplist ]
-		then
-			break
-		fi
-		temp[$n]=$(echo 172.67.195.$(($RANDOM%256)))
-		n=$[$n+1]
-		if [ $n -ge $iplist ]
-		then
-			break
-		fi
-		temp[$n]=$(echo 172.68.195.$(($RANDOM%256)))
-		n=$[$n+1]
-		if [ $n -ge $iplist ]
-		then
-			break
-		fi
-		temp[$n]=$(echo 172.69.195.$(($RANDOM%256)))
-		n=$[$n+1]
-		if [ $n -ge $iplist ]
-		then
-			break
-		fi
-		temp[$n]=$(echo 172.71.195.$(($RANDOM%256)))
+		temp[$n]=$(echo 141.101.$(($RANDOM%256)).$(($RANDOM%256)))
 		n=$[$n+1]
 		if [ $n -ge $iplist ]
 		then
@@ -93,49 +57,7 @@ endipv4(){
 		then
 			break
 		else
-			temp[$n]=$(echo 172.64.195.$(($RANDOM%256)))
-			n=$[$n+1]
-		fi
-		if [ $(echo ${temp[@]} | sed -e 's/ /\n/g' | sort -u | wc -l) -ge $iplist ]
-		then
-			break
-		else
-			temp[$n]=$(echo 172.65.195.$(($RANDOM%256)))
-			n=$[$n+1]
-		fi
-		if [ $(echo ${temp[@]} | sed -e 's/ /\n/g' | sort -u | wc -l) -ge $iplist ]
-		then
-			break
-		else
-			temp[$n]=$(echo 172.66.195.$(($RANDOM%256)))
-			n=$[$n+1]
-		fi
-		if [ $(echo ${temp[@]} | sed -e 's/ /\n/g' | sort -u | wc -l) -ge $iplist ]
-		then
-			break
-		else
-			temp[$n]=$(echo 172.67.195.$(($RANDOM%256)))
-			n=$[$n+1]
-		fi
-		if [ $(echo ${temp[@]} | sed -e 's/ /\n/g' | sort -u | wc -l) -ge $iplist ]
-		then
-			break
-		else
-			temp[$n]=$(echo 172.68.195.$(($RANDOM%256)))
-			n=$[$n+1]
-		fi
-		if [ $(echo ${temp[@]} | sed -e 's/ /\n/g' | sort -u | wc -l) -ge $iplist ]
-		then
-			break
-		else
-			temp[$n]=$(echo 172.69.195.$(($RANDOM%256)))
-			n=$[$n+1]
-		fi
-		if [ $(echo ${temp[@]} | sed -e 's/ /\n/g' | sort -u | wc -l) -ge $iplist ]
-		then
-			break
-		else
-			temp[$n]=$(echo 172.71.195.$(($RANDOM%256)))
+			temp[$n]=$(echo 141.101.$(($RANDOM%256)).$(($RANDOM%256)))
 			n=$[$n+1]
 		fi
 	done
