@@ -44,7 +44,7 @@ endipv4(){
 	iplist=100
 	while true
 	do
-		temp[$n]=$(echo 141.101.$(($RANDOM%256)).$(($RANDOM%256)))
+		temp[$n]=$(echo 162.158.193.$(($RANDOM%256)))
 		n=$[$n+1]
 		if [ $n -ge $iplist ]
 		then
@@ -57,7 +57,7 @@ endipv4(){
 		then
 			break
 		else
-			temp[$n]=$(echo 141.101.$(($RANDOM%256)).$(($RANDOM%256)))
+			temp[$n]=$(echo 162.158.193.$(($RANDOM%256)))
 			n=$[$n+1]
 		fi
 	done
@@ -114,7 +114,7 @@ echo -e "${green}Results Saved in result.csv${rest}"
 echo""
 echo -e "${yellow}------------------------------------------${rest}"
 if [ "$Endip_v4" ]; then
-  echo -e "${yellow} Best IPv4:Port ---> ${purple}$Endip_v4 ${rest}"
+  echo -e "${yellow} Best IPv4:Port ---> warp://${purple}$Endip_v4/?ifp=5-10 ${rest}"
 elif [ "$Endip_v6" ]; then
   echo -e "${yellow} Best IPv6:Port ---> ${purple}$Endip_v6 ${rest}"
 else
